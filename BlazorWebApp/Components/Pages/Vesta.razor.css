@@ -1,0 +1,106 @@
+﻿/* Grundlegendes Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.video-container {
+    position: relative;
+    width: 70%; /* ← Breite auf z. B. 70% reduzieren */
+    max-width: 1100px; /* ← optional: maximale Breite */
+    padding-bottom: 39.375%; /* ← 70% von 56.25%, damit 16:9 Verhältnis bleibt */
+    height: 0;
+    overflow: hidden;
+    margin: 0 auto 2rem auto; /* ← zentriert */
+}
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+/* Bildgalerie */
+.image-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 40px;
+    background-color: white;
+}
+
+/* Einzelne Bilder */
+.image-item {
+    text-align: center;
+    max-width: 80%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .image-item img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        /* Hover-Effekt */
+        .image-item img:hover {
+            transform: scale(1.025);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+    /* Bild-Beschriftungen */
+    .image-item p {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+/* Animation für sanftes Einblenden der Bilder */
+.image-item {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    /* Bildgröße auf mobilen Geräten weiter optimieren */
+    .image-item {
+        width: 100%; /* Nutzt die volle Breite */
+        max-width: none; /* Keine maximale Breitenbegrenzung */
+    }
+
+        .image-item img {
+            width: 100%; /* Bild auf volle Breite des Containers setzen */
+            max-width: 500px; /* Höheres Limit für größere Darstellung */
+            height: auto; /* Verhältnis beibehalten */
+        }
+
+    /* Falls die Bilder zentriert werden sollen */
+    .image-gallery {
+        width: 100%;
+        padding: 20px;
+    }
+}

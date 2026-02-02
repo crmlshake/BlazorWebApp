@@ -1,0 +1,590 @@
+﻿html, body, .home-wrapper {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* verhindert horizontales Scrollen */
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* -----------------------------------
+   FULLSCREEN-HERO MIT BACKGROUND
+------------------------------------*/
+.fullscreen-hero {
+    background-image: url("images/EpicBackgroundAFOSRefresh18.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%; /* statt 100vw */
+    max-width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* -----------------------------------
+   NAVBAR
+------------------------------------*/
+.navbar {
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* statt 100vw */
+    max-width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1000;
+}
+
+.news {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    flex: 1;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo {
+    height: 70px;
+    width: 70px;
+}
+
+.search-box {
+    width: 250px;
+    padding: 8px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    color: black;
+}
+
+/* -----------------------------------
+   INFO-BLOCK unter Hero
+------------------------------------*/
+.info-block {
+    background-color: black; /*Vorher weiß*/
+    color: #BEBEBE;
+    text-align: center;
+    padding-top: 140px;
+    padding-bottom: 40px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+    .info-block .info-title {
+        color: white;
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+
+/* -----------------------------------
+    TEST2! 
+------------------------------------*/
+.infocontent-section {
+    background-color: black;
+    padding-top: 0px;
+    padding-bottom: 20px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+
+/* Infohero-Blöcke */
+.infohero-section {
+    background: linear-gradient(to bottom, #8039B3, #3A1854);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    max-width: 100%;
+    overflow-x: hidden;
+    height: 600px;
+    padding: 40px;
+    margin: 80px auto 0 auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-sizing: border-box;
+    position: relative; /* für Overlay */
+}
+
+    .infohero-section:hover {
+        transform: scale(1.020);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+/* Textcontainer */
+.infotext-container {
+    width: 50%;
+    margin-left: auto;
+    position: relative;
+    z-index: 1; /* über Overlay */
+    transform: translateX(+130px); /* nach links schieben */
+}
+
+    .infotext-container h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: white;
+        text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
+        text-align: left;
+    }
+
+    .infotext-container p {
+        font-size: 1.2rem;
+        color: #BEBEBE;
+        text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
+        text-align: left;
+    }
+
+/* Hero-Bilder als Hintergrund */
+.infoimage {
+    background: url('images/AFOSImage5.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+/* -----------------------------------
+   IDEA-BLOCK
+------------------------------------*/
+.idea-block {
+    background-color: black; /*Vorher weiß*/
+    color: #BEBEBE;
+    text-align: center;
+    padding-top: 130px;
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+    .idea-block .idea-title {
+        color: white;
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+/* -----------------------------------
+    TEST2!
+------------------------------------*/
+.techtestcontent-section {
+    background-color: black;
+    padding-top: 60px;
+    padding-bottom: 10px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+
+/* Infohero-Blöcke */
+.techtesthero-section {
+    background: linear-gradient(to bottom, #8039B3, #3A1854);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* ZENTRIERT */
+    width: 95%;
+    max-width: 100%;
+    overflow-x: hidden;
+    height: 600px;
+    padding: 40px;
+    margin: 80px auto 0 auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-sizing: border-box;
+    position: relative;
+}
+
+    .techtesthero-section:hover {
+        transform: scale(1.020);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+.techtestoverlay-container {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin-left: auto; /* 🔥 schiebt nach rechts */
+    margin-right: 100px; /* Abstand zum Rand */
+    text-align: left; /* Text wieder linksbündig */
+    color: white;
+}
+
+    /* Headline */
+    .techtestoverlay-container h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: white;
+        text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
+        margin-bottom: 20px;
+    }
+
+/* Tech Icons Grid im Hero */
+.techtesticon-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    max-width: 420px;
+    margin: 0 auto;
+    justify-items: center;
+    align-items: center;
+}
+
+    /* Icons */
+    .techtesticon-grid img {
+        width: 60px;
+        height: auto;
+        transition: transform 0.18s ease;
+        -webkit-user-drag: none;
+        user-select: none;
+    }
+
+        .techtesticon-grid img:hover {
+            transform: scale(1.15);
+        }
+
+/* Hero-Bilder als Hintergrund */
+.techtestimage {
+    background: url('images/AFOSImage7.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+/* -----------------------------------
+   WEISSER BEREICH AB SCROLL
+------------------------------------*/
+.content-section {
+    background-color: black; /*Vorher weiß*/
+    padding-top: 100px;
+    padding-bottom: 80px; /* hier Abstand zum Seitenende hinzufügen */
+    width: 100%; /* statt 100vw */
+    max-width: 100%;
+    margin: 0;
+}
+
+/* Hero-Blöcke */
+.hero-section {
+    background: linear-gradient(to bottom, #8039B3, #3A1854);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    max-width: 100%;
+    overflow-x: hidden;
+    height: 600px;
+    padding: 40px;
+    margin: 80px auto 0 auto; /* oben 80px, links/rechts auto = zentriert */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+
+    .hero-section:hover {
+        transform: scale(1.020);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+.text-container {
+    width: 50%;
+}
+
+    .text-container h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: white;
+        text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .text-container p {
+        font-size: 1.2rem;
+        color: #BEBEBE;
+        text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
+    }
+
+/* Button */
+.explore-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 17px;
+    transition: background-color 0.3s ease;
+}
+
+    .explore-button:hover {
+        background-color: #444;
+    }
+
+/* Bilder */
+.vestalogo,
+.ascendlogo {
+    width: 40%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+/* -----------------------------------
+   FOOTER / IMPRESSUM
+------------------------------------*/
+.footer-section {
+    margin-top: 120px;
+    padding: 180px 20px;
+    width: 100%;
+    background-image: url("/images/Footer2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end; /* NEU */
+    align-items: flex-start;
+    color: #BEBEBE;
+    font-size: 0.95rem;
+    text-align: right; /* NEU */
+}
+
+
+    .footer-content h3 {
+        color: white;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+    }
+
+    .footer-content a {
+        color: white;
+        text-decoration: none;
+    }
+
+        .footer-content a:hover {
+            text-decoration: underline;
+        }
+
+/* -----------------------------------
+   RESPONSIVE – MOBILE FIRST (NEU)
+------------------------------------*/
+@media (max-width: 768px) {
+
+    /* -----------------------------------
+       GLOBAL MOBILE CLEANUP
+    ------------------------------------*/
+    p br {
+        display: none;
+    }
+
+    /* 🔥 Mobile Hero Background */
+    .fullscreen-hero {
+        background-image: url("images/EpicBackgroundAFOSMobile1.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+
+    /* 🔥 FIX: Impressum – Zeilenumbrüche + Zentrierung */
+    .footer-imprint p br {
+        display: block;
+    }
+
+    .footer-imprint p {
+        text-align: center;
+    }
+
+    /* -----------------------------------
+       NAVBAR
+    ------------------------------------*/
+    .navbar {
+        height: 55px;
+        padding: 0 10px;
+    }
+
+    .news {
+        font-size: 1rem;
+    }
+
+    .logo {
+        height: 48px;
+        width: 48px;
+    }
+
+    .search-box {
+        width: 110px;
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+
+    /* -----------------------------------
+       INFO BLOCK
+    ------------------------------------*/
+    .info-block {
+        margin-top: 80px;
+        padding: 40px 20px;
+        font-size: 1rem;
+    }
+
+        .info-block .info-title {
+            font-size: 1.8rem;
+        }
+
+    /* -----------------------------------
+       INFO HERO
+    ------------------------------------*/
+    .infohero-section {
+        flex-direction: column;
+        height: auto;
+        margin-top: 80px;
+        padding: 40px 20px;
+        width: 92%;
+    }
+
+    .infoimage {
+        background: #212121;
+    }
+
+    .infotext-container {
+        width: 100%;
+        margin: 0;
+        transform: none;
+        text-align: center;
+    }
+
+        .infotext-container h1 {
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .infotext-container p {
+            font-size: 1rem;
+            text-align: center;
+        }
+
+    /* -----------------------------------
+       IDEA BLOCK
+    ------------------------------------*/
+    .idea-block {
+        margin-top: 80px;
+        padding: 40px 20px;
+        font-size: 1rem;
+    }
+
+        .idea-block .idea-title {
+            font-size: 1.8rem;
+        }
+
+    /* -----------------------------------
+       TECH HERO
+    ------------------------------------*/
+    .techtesthero-section {
+        height: auto;
+        margin-top: 80px;
+        padding: 40px 20px;
+        width: 92%;
+    }
+
+    .techtestimage {
+        background: #212121;
+    }
+
+    .techtestoverlay-container {
+        margin: 0;
+        text-align: center;
+        max-width: 100%;
+    }
+
+        .techtestoverlay-container h1 {
+            font-size: 2rem;
+        }
+
+    .techtesticon-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        max-width: 100%;
+    }
+
+        .techtesticon-grid img {
+            width: 52px;
+        }
+
+    /* -----------------------------------
+       PROJECT HERO SECTIONS
+    ------------------------------------*/
+    .hero-section {
+        flex-direction: column;
+        height: auto;
+        margin-top: 80px;
+        padding: 40px 20px;
+        width: 92%;
+        text-align: center;
+    }
+
+    .text-container {
+        width: 100%;
+    }
+
+        .text-container h1 {
+            font-size: 2rem;
+        }
+
+        .text-container p {
+            font-size: 1rem;
+        }
+
+    .explore-button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .vestalogo,
+    .ascendlogo {
+        width: 80%;
+        max-width: 280px;
+        margin-top: 20px;
+    }
+
+    /* -----------------------------------
+       FOOTER
+    ------------------------------------*/
+    .footer-section {
+        margin-top: 80px;
+        padding: 120px 20px;
+        background: linear-gradient(to bottom, #8039B3, #3A1854);
+    }
+
+    .footer-content {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
